@@ -1,4 +1,4 @@
-# Data Management Engineering
+# Data Management Engineering Cookiecutter
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
@@ -90,7 +90,7 @@
 
 ```bash
 # 1. Клонируйте этот репозиторий
-git clone git@github.com:Konstantaza/Data-management-Engineering.git
+git clone git@github.com:Konstantaza/DME-Cookiecutter.git
 cd DME-Cookiecutter
 
 # 2. Создайте окружение conda (например, data_eng)
