@@ -32,50 +32,32 @@
 ## Project Organization
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
+├── LICENSE
+├── Makefile
+├── Plant_microbiome.jpg
+├── README.md
+├── creds.db
 ├── data
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         etl and configuration for tools like black
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8
-│
-└── etl   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes etl a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
+│   ├── processed
+│   └── raw          
+├── docs
+├── etl
+│   ├── __init__.py  
+│   ├── extract.py      # Extract from GDrive
+│   ├── load.py         # Load to DB
+│   ├── main.py         # The main executable file
+│   └── transform.py    # Type conversion
+├── models
+├── notebooks
+│   └── EDA.ipynb
+├── poetry.lock
+├── pyproject.toml
+├── references
+├── reports
+│   └── figures
+├── setup.cfg
+└── tests
+    └── test_data.py
 ```
 
 --------
@@ -116,8 +98,3 @@ poetry run python -m etl.main --step all
     poetry run python -m etl.main --step load
 
 ```
-
-### Дополнительные примеры
-В папке `my_project/archive` находятся дополнительные скрипты, демонстрирующие:
-1. `api_example`: Пример работы с API (получение данных о шутках).
-2. `parse_example`: Пример парсинга HTML-таблиц с веб-страниц.
