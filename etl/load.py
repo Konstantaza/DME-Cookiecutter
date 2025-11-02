@@ -16,10 +16,10 @@ def get_creds_from_input():
     
     creds = {}
     creds['host'] = input("  Введите PG_HOST: ")
-    creds['port'] = input("  Введите PG_PORT (напр. 5432): ")
+    creds['port'] = input("  Введите PG_PORT: ")
     creds['user'] = input("  Введите PG_USER: ")
     creds['password'] = getpass.getpass("  Введите PG_PASS (ввод будет скрыт): ") # Скрытый ввод пароля
-    creds['dbname'] = input("  Введите PG_DBNAME (напр. homeworks): ")
+    creds['dbname'] = input("  Введите PG_DBNAME (например homeworks): ")
     
     if not all(creds.values()):
         print("  [Load Ошибка] Не все учетные данные были введены.")
