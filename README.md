@@ -75,17 +75,18 @@
 git clone git@github.com:Konstantaza/DME-Cookiecutter.git
 cd DME-Cookiecutter
 
-# 2. Создайте окружение conda (например, data_eng)
-conda create -n data_eng python=3.13 pip
-conda activate data_eng
-
-# 3. Установите Poetry
+# 2. Установите Poetry
 pip install poetry
 
-# 4. Установите все зависимости проекта
-poetry install
+# 3. Создайте удобное вам коружение для работы (conda, docker и тд.)
 
-# 5. Запустите полный ETL-процесс
+# 4. Установите Poetry
+pip install poetry
+
+# 5. Установите все зависимости проекта
+poetry install --no-root
+
+# 6. Запустите полный ETL-процесс
 poetry run python -m etl.main --step all
 
     # Только извлечение
